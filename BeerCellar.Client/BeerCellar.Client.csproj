@@ -63,12 +63,15 @@
     <Content Include="Content\css\beerCellar.min.css">
       <DependentUpon>beerCellar.less</DependentUpon>
     </Content>
+    <Content Include="Controllers\addEntryController.js" />
     <Content Include="Controllers\beerCellarController.js" />
     <Content Include="lib\angular.js" />
     <Content Include="lib\underscore-min.js" />
     <Content Include="Models\cellarEntry.js" />
     <Content Include="Modules\beerCellarModule.js" />
-    <Content Include="Views\index.html" />
+    <Content Include="index.html" />
+    <Content Include="Views\partials\list.html" />
+    <Content Include="Views\partials\new.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

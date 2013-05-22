@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>BeerCellar</title>
+    <link rel="stylesheet" type="text/css" href="../Content/css/beerCellar.css" />
+    
+</head>
+<body ng-app="beerCellarModule" ng-controller="beerCellarController">
+    <h1>
+        BeerCellar
+    </h1>
+    
+    <!-- "single page app" -->
+    <div ng-view></div>
+
+    <script src="../lib/underscore-min.js"></script>
+    <script src="../lib/angular.js"></script>
+    <script src="../Modules/beerCellarModule.js"></script>
+    <script src="../Controllers/beerCellarController.js"></script>
+    <script src="../Controllers/addEntryController.js"></script>
+</body>
+</html>
