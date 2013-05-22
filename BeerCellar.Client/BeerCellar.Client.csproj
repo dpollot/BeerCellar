@@ -57,8 +57,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\beerCellar.css">
+      <DependentUpon>beerCellar.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\beerCellar.min.css">
+      <DependentUpon>beerCellar.less</DependentUpon>
+    </Content>
     <Content Include="Controllers\beerCellarController.js" />
     <Content Include="lib\angular.js" />
+    <Content Include="lib\underscore-min.js" />
     <Content Include="Models\cellarEntry.js" />
     <Content Include="Modules\beerCellarModule.js" />
     <Content Include="Views\index.html" />
@@ -69,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="lib\angular-v1.0.3.js" />
+    <Content Include="Content\css\beerCellar.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -76,6 +84,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
