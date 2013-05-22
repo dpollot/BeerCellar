@@ -12,9 +12,10 @@ namespace BeerCellar.Core
     public class CellarEntry
     {
         #region properties/fields
-        [JsonProperty("_id")]
-        [BsonElement("_id")]
-        public ObjectId Id { get; set; }
+        [JsonProperty("id")]
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
 
         [JsonProperty("breweryName")]
         [BsonElement("breweryName")]

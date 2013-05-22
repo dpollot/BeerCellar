@@ -1,9 +1,16 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+    <title>BeerCellar</title>
+    <script src="../lib/angular.js"></script>
+    <script src="../Modules/beerCellarModule.js"></script>
+    <script src="../Controllers/beerCellarController.js"></script>
 </head>
-<body>
-
+<body ng-app="beerCellarModule">
+    <div ng-controller="beerCellarController">
+        <div ng-repeat="beer in myBeers">
+            <div>{{beer.beerName}}</div>
+        </div>
+    </div>
 </body>
 </html>
