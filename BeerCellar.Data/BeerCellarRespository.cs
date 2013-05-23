@@ -33,12 +33,34 @@ namespace BeerCellar.Data
         #region public methods
         public IEnumerable<CellarEntry> GetCollection()
         {
-            var server = Client.GetServer();
-            var db = server.GetDatabase(BeerCellarRepository.DatabaseName);
+            var db = GetDatabase();
 
-            var beers = db.GetCollection<CellarEntry>("myBeers").FindAll().ToList();
+            var beers = db.GetCollection<CellarEntry>(BeerCellarDatabase.Collections.MyBeers).FindAll().ToList();
             return beers;
         }
+
+        public void InsertEntry(CellarEntry entry)
+        {
+            var db = GetDatabase();
+            db.GetCollection<CellarEntry>(BeerCellarDatabase.Collections.MyBeers).Insert<CellarEntry>(entry);
+        }
         #endregion
+
+        #region private methods
+        private MongoDatabase GetDatabase()
+        {
+            var server = Client.GetServer();
+            return server.GetDatabase(BeerCellarRepository.DatabaseName);
+        }
+        #endregion
+    }
+
+    public static class BeerCellarDatabase
+    {
+        public static readonly string Name = "beerCellar";
+        public static class Collections
+        {
+            public static readonly string MyBeers = "myBeers";
+        }
     }
 }
