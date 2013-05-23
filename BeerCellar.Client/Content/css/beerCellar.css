@@ -1,4 +1,38 @@
-﻿body .left {
+﻿h1 {
+  color: #a66d03;
+  font-weight: normal;
+  font-family: 'BebasNeueRegular', Helvetica, Arial, sans-serif;
+}
+h2 {
+  color: #a66d03;
+  font-weight: normal;
+  font-family: 'LeagueGothicRegular', Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+}
+h6 {
+  color: #a66d03;
+  font-weight: normal;
+  font-family: 'BebasNeueRegular', Helvetica, Arial, sans-serif;
+  font-size: 23px;
+  margin: 0;
+}
+hr {
+  border-bottom: 5px solid #25261e;
+}
+.content {
+  width: 1024px;
+  margin: 0px auto;
+}
+.header-divider {
+  height: 11px;
+  width: 100%;
+  background: url('../images/subtle_grunge.png');
+  border-bottom: 8px solid #25261e;
+}
+body {
+  background: url('../images/subtle_grunge.png');
+}
+body .left {
   float: left;
 }
 body .clear {
@@ -7,4 +41,24 @@ body .clear {
 body .column-header {
   width: 200px;
   text-align: left;
+}
+#header {
+  background-color: #25261e;
+  background-image: url('../images/bottles-bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding: 10px 0;
+}
+#header .logo {
+  width: 171px;
+  height: 166px;
+  display: block;
+  margin: 0 auto;
+}
+#header .tagline {
+  font-size: 30px;
+  text-align: center;
+}
+#mainContainer {
+  padding: 20px 0;
 }

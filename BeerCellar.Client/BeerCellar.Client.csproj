@@ -63,6 +63,16 @@
     <Content Include="Content\css\beerCellar.min.css">
       <DependentUpon>beerCellar.less</DependentUpon>
     </Content>
+    <Content Include="Content\css\normalize.min.css" />
+    <Content Include="Content\fonts\BebasNeue-webfont.svg" />
+    <Content Include="Content\fonts\LeagueGothic-CondensedItalic-webfont.svg" />
+    <Content Include="Content\fonts\LeagueGothic-CondensedRegular-webfont.svg" />
+    <Content Include="Content\fonts\LeagueGothic-Italic-webfont.svg" />
+    <Content Include="Content\fonts\LeagueGothic-Regular-webfont.svg" />
+    <Content Include="Content\fonts\stylesheet.css" />
+    <Content Include="Content\images\search-icon.png" />
+    <Content Include="Content\images\subtle_grunge.png" />
+    <Content Include="Content\images\logo.png" />
     <Content Include="Controllers\addEntryController.js" />
     <Content Include="Controllers\beerCellarController.js" />
     <Content Include="lib\angular.js" />
@@ -80,6 +90,20 @@
   <ItemGroup>
     <Content Include="lib\angular-v1.0.3.js" />
     <Content Include="Content\css\beerCellar.less" />
+    <Content Include="Content\fonts\BebasNeue-webfont.ttf" />
+    <Content Include="Content\fonts\BebasNeue-webfont.woff" />
+    <Content Include="Content\fonts\LeagueGothic-CondensedItalic-webfont.eot" />
+    <Content Include="Content\fonts\LeagueGothic-CondensedItalic-webfont.ttf" />
+    <Content Include="Content\fonts\LeagueGothic-CondensedItalic-webfont.woff" />
+    <Content Include="Content\fonts\LeagueGothic-CondensedRegular-webfont.eot" />
+    <Content Include="Content\fonts\LeagueGothic-CondensedRegular-webfont.ttf" />
+    <Content Include="Content\fonts\LeagueGothic-CondensedRegular-webfont.woff" />
+    <Content Include="Content\fonts\LeagueGothic-Italic-webfont.eot" />
+    <Content Include="Content\fonts\LeagueGothic-Italic-webfont.ttf" />
+    <Content Include="Content\fonts\LeagueGothic-Italic-webfont.woff" />
+    <Content Include="Content\fonts\LeagueGothic-Regular-webfont.eot" />
+    <Content Include="Content\fonts\LeagueGothic-Regular-webfont.ttf" />
+    <Content Include="Content\fonts\LeagueGothic-Regular-webfont.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,17 +1,30 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>BeerCellar</title>
+    <meta name="description" content="An inventory system for the beer enthusiast">
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="stylesheet" type="text/css" href="../Content/css/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/fonts/stylesheet.css" />
     <link rel="stylesheet" type="text/css" href="../Content/css/beerCellar.css" />
     
 </head>
 <body ng-app="beerCellarModule" ng-controller="beerCellarController">
-    <h1>
-        BeerCellar
-    </h1>
-    
+    <div id="header">
+        <div class="content">
+            <div class="hero">
+                <img class="logo" alt="logo" src="Content/images/logo.png" />
+                <!--<h1>Beer Cellar</h1>-->
+                <h2 class="tagline">An inventory system for the beer enthusiast.</h2>
+            </div>
+        </div>
+    </div>
+    <div class="header-divider"></div>
     <!-- "single page app" -->
-    <div ng-view></div>
+    <div class="content" id="mainContainer" ng-view></div>
 
     <script src="../lib/underscore-min.js"></script>
     <script src="../lib/angular.js"></script>
