@@ -26,7 +26,13 @@
         if (beer.count + dir >= 0)
             beer.count += dir;
 
-        //TODO: Update DB
+        $http.put("http://localhost:49167/api/beercellar", JSON.stringify(beer))
+            .success(function () {
+                alert("updated!");
+            })
+            .error(function (data, status, headers, config) {
+
+            });
     }
 
     $scope.$on('handleBroadcast', function () {
