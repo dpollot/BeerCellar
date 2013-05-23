@@ -57,15 +57,32 @@ a {
     color: #25261E;
     font-size: 30px;
     text-decoration: none;
+    cursor: pointer;
 
     &:hover {
         border-bottom: 2px solid @color-charcoal;
     }
 }
 
+input{
+    padding: 5px 10px;
+    border: 1px solid @color-charcoal;
+    .font-LeagueGothic();
+    font-size: 24px;
+}
+
 hr{
     border-bottom: 5px solid @color-charcoal;
     margin: 0 0 10px;
+}
+
+label{
+    color: @color-bronze;
+    font-weight: normal;
+    .font-BebasNeue;
+    font-size: 23px;
+    margin: 0;
+    display: block;
 }
 
 .content{
@@ -171,6 +188,11 @@ body {
 
 .add-link{
     float: right;
+}
+
+.input-section{
+    float: left;
+    margin-right: 30px;
 }
 
 

@@ -31,13 +31,29 @@ a {
   color: #25261E;
   font-size: 30px;
   text-decoration: none;
+  cursor: pointer;
 }
 a:hover {
   border-bottom: 2px solid #25261e;
 }
+input {
+  padding: 5px 10px;
+  border: 1px solid #25261e;
+  font-family: 'LeagueGothicRegular', Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
 hr {
   border-bottom: 5px solid #25261e;
   margin: 0 0 10px;
+}
+label {
+  color: #a66d03;
+  font-weight: normal;
+  font-family: 'BebasNeueRegular', Helvetica, Arial, sans-serif;
+  font-size: 23px;
+  margin: 0;
+  display: block;
 }
 .content {
   width: 1024px;
@@ -130,4 +146,8 @@ body .row {
 }
 .add-link {
   float: right;
+}
+.input-section {
+  float: left;
+  margin-right: 30px;
 }

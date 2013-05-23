@@ -1,9 +1,11 @@
 ﻿<div>
+    <h1>Add To Collection</h1>
     <form>
-        <div><input ng-model="entry.breweryName" placeholder="Brewery Name"/></div>
-        <div><input ng-model="entry.beerName" placeholder="Beer Name" /></div>
-        <div><input ng-model="entry.year" placeholder="Year bottled" /></div>
-        <div><input ng-model="entry.count" placeholder="Count" /></div>
-        <button ng-click="add()">Add Entry</button>
+        <div class="input-section"><label for="brewery">Brewery</label><input name="brewery" ng-model="entry.breweryName" placeholder="Brewery Name"/></div>
+        <div class="input-section"><label for="beer">Beer</label><input name="beer" ng-model="entry.beerName" placeholder="Beer Name" /></div>
+        <div class="input-section"><label for="bottled">Year Bottled</label><input name="bottled" ng-model="entry.year" placeholder="Year bottled" /></div>
+        <div class="input-section"><label for="quantity">Quantity</label><input name="quantity" ng-model="entry.count" placeholder="Quantity" /></div>
+        <br />
+        <a class="add-link" style="float:none" ng-click="add()">Add Beer <span class="bronze">+</span></a>
     </form>
 </div>
