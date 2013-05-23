@@ -16,6 +16,14 @@
         $scope.summary = { beerCount: beerSum, breweryCount: brewerySum };
     };
 
+    // Update Quantities
+    $scope.updateQuantity = function (dir, beer) {
+        if (beer.count + dir >= 0)
+            beer.count += dir;
+
+        //TODO: Update DB
+    }
+
     $scope.$on('handleBroadcast', function () {
         if (pubSub.topic == 'beerCellarController' && pubSub.body == 'refreshList') {
             loadList();

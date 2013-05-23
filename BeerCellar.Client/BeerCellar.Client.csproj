@@ -75,6 +75,7 @@
     <Content Include="Content\images\search-icon.png" />
     <Content Include="Content\images\subtle_grunge.png" />
     <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\up-down.png" />
     <Content Include="Controllers\addEntryController.js" />
     <Content Include="Controllers\beerCellarController.js" />
     <Content Include="lib\angular.js" />

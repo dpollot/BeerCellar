@@ -7,16 +7,19 @@
     <summary />
 </div>
 <hr />
-<div class="divider-bottom">
-    <div class="left column-header"><h6>Brewery</h6></div>
-    <div class="left column-header"><h6>Beer</h6></div>
-    <div class="left column-header"><h6>Qty</h6></div>
+<div>
+    <input id="searchBox" type="search" name="searchInventory" placeholder="Search My Cellar" data-ng-model="beerName" />
+</div>
+<div>
+    <div class="left column-header brewery"><h6>Brewery</h6></div>
+    <div class="left column-header beer"><h6>Beer</h6></div>
+    <div class="left column-header qnty"><h6>Qty</h6></div>
     <div class="clear"></div>
     <hr />
 </div>
-<div ng-repeat="beer in myBeers">
-    <div class="left column-header">{{beer.breweryName}}</div>
-    <div class="left column-header">{{beer.beerName}}</div>
-    <div class="left column-header">{{beer.count}}</div>
+<div ng-repeat="beer in myBeers | filter:beerName">
+    <div class="left column-header brewery"><h5>{{beer.breweryName}}</h5></div>
+    <div class="left column-header beer"><h5>{{beer.beerName}}</h5></div>
+    <div class="left column-header qnty"><h5>{{beer.count}} <div class="up-down"><button class="up" data-ng-click="updateQuantity(1,beer)"></button><button class="down" data-ng-click="updateQuantity(-1,beer)"></button></div></h5></div>
     <div class="clear"></div>
 </div>
