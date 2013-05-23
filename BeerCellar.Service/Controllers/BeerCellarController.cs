@@ -53,9 +53,10 @@ namespace BeerCellar.Service.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <param name="value"></param>
-        public void Put(int id, [FromBody]string value)
+        public void Put(string id, [FromBody]CellarEntry entry)
         {
-            throw new NotImplementedException("I ain't been implemented yo.  Gatorade me bitch!");
+            var repo = new BeerCellar.Data.BeerCellarRepository();
+            repo.UpdateEntry(entry);
         }
 
         /// <summary>

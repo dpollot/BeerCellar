@@ -1,5 +1,7 @@
 ﻿using BeerCellar.Core;
+using MongoDB.Bson;
 using MongoDB.Driver;
+using MongoDB.Driver.Builders;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -43,6 +45,17 @@ namespace BeerCellar.Data
         {
             var db = GetDatabase();
             db.GetCollection<CellarEntry>(BeerCellarDatabase.Collections.MyBeers).Insert<CellarEntry>(entry);
+        }
+
+        public void UpdateEntry(CellarEntry entry)
+        {
+            var db = GetDatabase();
+            
+            // I should be doing this by id
+            var q = Query.And(Query<CellarEntry>.EQ(e => e.BeerName, entry.BeerName), Query<CellarEntry>.EQ(e => e.BreweryName, entry.BreweryName));
+            var myBeers = db.GetCollection<CellarEntry>(BeerCellarDatabase.Collections.MyBeers);
+
+            myBeers.Update(q, update: Update<CellarEntry>.Set(e => e.Count, BsonValue.Create(entry.Count)));
         }
         #endregion
 
