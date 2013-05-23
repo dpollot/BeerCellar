@@ -70,6 +70,8 @@
     <Content Include="Content\fonts\LeagueGothic-Italic-webfont.svg" />
     <Content Include="Content\fonts\LeagueGothic-Regular-webfont.svg" />
     <Content Include="Content\fonts\stylesheet.css" />
+    <Content Include="Content\images\bottles-bg.png" />
+    <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\images\search-icon.png" />
     <Content Include="Content\images\subtle_grunge.png" />
     <Content Include="Content\images\logo.png" />
