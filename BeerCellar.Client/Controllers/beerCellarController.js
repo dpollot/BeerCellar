@@ -1,9 +1,14 @@
 ﻿var beerCellarController = function ($scope, $http, pubSub) {
 
+    // Pagination
+    $scope.currentPage = 0;
+    $scope.pageSize = 5; 
+
     // Load the list of my beers
     var loadList = function () {
         $http.get("http://localhost:49167/api/beercellar").success(function (data) {
             $scope.myBeers = data;
+            $scope.pageCount = window.Math.ceil($scope.myBeers.length / $scope.pageSize);
             refreshSummary();
         });
     };

@@ -55,4 +55,12 @@ app.directive("summary", function () {
     };
 });
 
+// Custom Filter for Pagination
+app.filter('startingPoint', function () {
+    return function (input, start) {
+        start = +start;
+        return input.slice(start);
+    }
+});
+
 

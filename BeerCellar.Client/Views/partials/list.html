@@ -15,9 +15,14 @@
     <div class="clear"></div>
     <hr />
 </div>
-<div ng-repeat="beer in myBeers | filter:beerName" class="row">
+<div data-ng-repeat="beer in myBeers | filter:beerName | startingPoint:currentPage*pageSize | limitTo:pageSize" class="row">
     <div class="left column-header brewery"><h5>{{beer.breweryName}}</h5></div>
     <div class="left column-header beer"><h5>{{beer.beerName}}</h5></div>
     <div class="left column-header qnty"><h5>{{beer.count}} <div class="up-down"><button class="up" data-ng-click="updateQuantity(1,beer)"></button><button class="down" data-ng-click="updateQuantity(-1,beer)"></button></div></h5></div>
     <div class="clear"></div>
+</div>
+<div class="pagination">
+    <button data-ng-disabled="currentPage == 0" data-ng-click="currentPage=currentPage-1"><</button>
+    {{currentPage+1}}/{{pageCount}}
+    <button data-ng-disabled="currentPage >= myBeers.length/pageSize - 1" data-ng-click="currentPage=currentPage+1">></button>
 </div>
