@@ -1,7 +1,9 @@
 ﻿h1 {
-  color: #a66d03;
+  color: #25261e;
   font-weight: normal;
   font-family: 'BebasNeueRegular', Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 h2 {
   color: #a66d03;
@@ -24,6 +26,15 @@ h5 {
   font-size: 28px;
   margin: 0;
 }
+a {
+  font-family: 'BebasNeueRegular';
+  color: #25261E;
+  font-size: 30px;
+  text-decoration: none;
+}
+a:hover {
+  border-bottom: 2px solid #25261e;
+}
 hr {
   border-bottom: 5px solid #25261e;
   margin: 0 0 10px;
@@ -31,6 +42,9 @@ hr {
 .content {
   width: 1024px;
   margin: 0px auto;
+}
+.bronze {
+  color: #a66d03;
 }
 .header-divider {
   height: 11px;
@@ -71,6 +85,9 @@ body .column-header {
 body .column-header.qnty {
   width: 50px;
 }
+body .row {
+  margin: 10px 0;
+}
 #header {
   background-color: #25261e;
   background-image: url('../images/bottles-bg.png');
@@ -109,5 +126,8 @@ body .column-header.qnty {
   font-size: 26px;
   font-family: 'LeagueGothicRegular', Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
-  margin: 35px auto;
+  margin: 55px auto 35px;
+}
+.add-link {
+  float: right;
 }

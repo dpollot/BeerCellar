@@ -44,7 +44,7 @@ app.directive("summary", function () {
         // We can restrict to [E(element)|A(attribute)|C(class)|M(comment)]
         restrict: "E",
         // We can provide any template - and that template can contain databinding expressions
-        template: "<div>Summary:  I have {{summary.beerCount}} beers from {{summary.breweryCount}} breweries.</div>",
+        template: "<div><h2>Summary:  I have {{summary.beerCount}} beers from {{summary.breweryCount}} breweries.</h2></div>",
         // The linking function is called when the directive is first compiled in
         link: function (scope, element) {
             // This could really be anything...

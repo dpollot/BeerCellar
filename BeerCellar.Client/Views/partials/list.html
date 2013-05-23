@@ -1,12 +1,10 @@
 ﻿<div>
-    <strong>Here's what's in my cellar</strong><a href="/new">Add To My Collection</a>
+    <h1>My Cellar</h1><a class="add-link" href="/new">Add To My Collection <span class="bronze">+</span></a>
 </div>
-<hr />
 <div>
     <!-- custom directive -->
     <summary />
 </div>
-<hr />
 <div>
     <input id="searchBox" type="search" name="searchInventory" placeholder="Search My Cellar" data-ng-model="beerName" />
 </div>
@@ -17,7 +15,7 @@
     <div class="clear"></div>
     <hr />
 </div>
-<div ng-repeat="beer in myBeers | filter:beerName">
+<div ng-repeat="beer in myBeers | filter:beerName" class="row">
     <div class="left column-header brewery"><h5>{{beer.breweryName}}</h5></div>
     <div class="left column-header beer"><h5>{{beer.beerName}}</h5></div>
     <div class="left column-header qnty"><h5>{{beer.count}} <div class="up-down"><button class="up" data-ng-click="updateQuantity(1,beer)"></button><button class="down" data-ng-click="updateQuantity(-1,beer)"></button></div></h5></div>
