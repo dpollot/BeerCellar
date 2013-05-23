@@ -49,8 +49,8 @@ hr {
   border: none;
   display: block;
 }
-.up-down button:first-child {
-  margin-bottom: 12px;
+.up-down .up {
+  margin-bottom: 7px;
 }
 .up-down .down {
   background-position: 0px -15px;
