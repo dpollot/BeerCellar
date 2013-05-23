@@ -95,8 +95,11 @@ body .clear {
   clear: both;
 }
 body .column-header {
-  width: 487px;
+  width: 387px;
   text-align: left;
+}
+body .column-header.year {
+  width: 200px;
 }
 body .column-header.qnty {
   width: 50px;
