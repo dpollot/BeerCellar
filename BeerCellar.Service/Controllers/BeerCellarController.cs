@@ -53,7 +53,7 @@ namespace BeerCellar.Service.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <param name="value"></param>
-        public void Put(string id, [FromBody]CellarEntry entry)
+        public void Put([FromBody]CellarEntry entry)
         {
             var repo = new BeerCellar.Data.BeerCellarRepository();
             repo.UpdateEntry(entry);
