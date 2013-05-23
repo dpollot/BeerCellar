@@ -58,7 +58,10 @@ app.directive("summary", function () {
 // Custom Filter for Pagination
 app.filter('startingPoint', function () {
     return function (input, start) {
+        // Increment our starting point
         start = +start;
+
+        // If the data has loaded, splice it from our starting point
         if (input != null)
             return input.slice(start);
     }
