@@ -185,6 +185,9 @@ body .row {
 .pagination button:hover {
   text-decoration: underline;
 }
+.pagination button:hover:disabled {
+  text-decoration: none;
+}
 /***************
 Responsive   
 ****************/
