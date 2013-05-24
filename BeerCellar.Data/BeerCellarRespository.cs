@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BeerCellar.Data
 {
-    public class BeerCellarRepository
+    public class BeerCellarRepository : IBeerCellarRepository
     {
         #region properties/fields
         private static readonly string RepositoryKey = "BeerCellar";
@@ -41,13 +41,16 @@ namespace BeerCellar.Data
             return beers;
         }
 
-        public void InsertEntry(CellarEntry entry)
+        public CellarEntry InsertEntry(CellarEntry entry)
         {
             var db = GetDatabase();
-            db.GetCollection<CellarEntry>(BeerCellarDatabase.Collections.MyBeers).Insert<CellarEntry>(entry);
+            var result = db.GetCollection<CellarEntry>(BeerCellarDatabase.Collections.MyBeers).Insert<CellarEntry>(entry);
+            
+            // For now... I'll return the entry later
+            return null;
         }
 
-        public void UpdateEntry(CellarEntry entry)
+        public CellarEntry UpdateEntry(CellarEntry entry)
         {
             var db = GetDatabase();
             
@@ -56,6 +59,8 @@ namespace BeerCellar.Data
             var myBeers = db.GetCollection<CellarEntry>(BeerCellarDatabase.Collections.MyBeers);
 
             myBeers.Update(q, update: Update<CellarEntry>.Set(e => e.Count, BsonValue.Create(entry.Count)));
+
+            return entry;
         }
         #endregion
 

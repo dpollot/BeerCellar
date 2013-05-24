@@ -1,4 +1,5 @@
 ﻿using BeerCellar.Core;
+using BeerCellar.Data;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace BeerCellar.Service.Controllers
         /// <returns></returns>
         public IEnumerable<CellarEntry> Get()
         {
-            var repo = new BeerCellar.Data.BeerCellarRepository();
+            var repo = BeerCellarRespositoryProvider.GetRepository();
             var collection = repo.GetCollection();
 
             return collection;
@@ -43,7 +44,7 @@ namespace BeerCellar.Service.Controllers
         /// <param name="value">the json representation of a CellarEntry</param>
         public void Post([FromBody]CellarEntry entry)
         {
-            var repo = new BeerCellar.Data.BeerCellarRepository();
+            var repo = BeerCellarRespositoryProvider.GetRepository();
             repo.InsertEntry(entry);
         }
 
@@ -55,7 +56,7 @@ namespace BeerCellar.Service.Controllers
         /// <param name="value"></param>
         public void Put([FromBody]CellarEntry entry)
         {
-            var repo = new BeerCellar.Data.BeerCellarRepository();
+            var repo = BeerCellarRespositoryProvider.GetRepository();
             repo.UpdateEntry(entry);
         }
 

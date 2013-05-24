@@ -2,7 +2,7 @@
 
     // Pagination
     $scope.currentPage = 0;
-    $scope.pageSize = 5; 
+    $scope.pageSize = 5;
 
     // Load the list of my beers
     var loadList = function () {
@@ -17,7 +17,7 @@
     var refreshSummary = function () {
         // grab the summary of my beers
         var beerSum = _.reduce($scope.myBeers, function (memo, entry) { return memo + entry.count; }, 0);
-        var brewerySum = _.size(_.uniq($scope.myBeers, false, function (item) { return item.breweryName }));
+        var brewerySum = _.size(_.uniq($scope.myBeers, false, function (item) { return item.breweryName; }));
         $scope.summary = { beerCount: beerSum, breweryCount: brewerySum };
     };
 
@@ -29,17 +29,23 @@
         $http.put("http://localhost:49167/api/beercellar", JSON.stringify(beer))
             .success(function () {
                 alert("updated!");
+                refreshSummary();
             })
             .error(function (data, status, headers, config) {
 
             });
-    }
+    };
 
     $scope.$on('handleBroadcast', function () {
-        if (pubSub.topic == 'beerCellarController' && pubSub.body == 'refreshList') {
+        if (pubSub.topic === 'beerCellarController' && pubSub.body === 'beerAdded') {
             loadList();
         }
     });
 
+    $scope.$on('handleBroadcast', function () {
+        if (pubSub.topic === 'filtered')
+            console.log(pubSub.body);
+    });
+
     loadList();
-}
+};

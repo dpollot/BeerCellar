@@ -114,7 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controllers\ValuesControllerTest.cs" />
+    <Compile Include="Controllers\BeerCellarControllerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -123,6 +123,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BeerCellar.Core\BeerCellar.Core.csproj">
+      <Project>{e3f916ef-60b2-46cc-9fb1-3b381105d0e1}</Project>
+      <Name>BeerCellar.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BeerCellar.Service\BeerCellar.Service.csproj">
       <Project>{B59D686E-E60D-499C-824A-242DCBD2046C}</Project>
       <Name>BeerCellar.Service</Name>
