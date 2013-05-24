@@ -7,7 +7,7 @@ var addEntryController = function addEntryController($scope, $http, $location, p
     $scope.add = function () {
         var json = JSON.stringify($scope.entry);
         $http.post('http://localhost:49167/api/beercellar', json).success(function () {
-            pubSub.prepareBroadcast("beerCellarController", "refreshList")
+            pubSub.prepareBroadcast("beerCellarController", "beerAdded")
             $location.path("/");
         }).error(function (data, status, headers, config) {
             alert(data);
